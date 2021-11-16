@@ -9,6 +9,11 @@ import { BoardStatusValidationPipe } from './pipes/board-status-validation.pipe'
 export class BoardsController {
      constructor(private boardsService:BoardsService){}
 
+            @Get()
+            getAllTask():Promise<Board[]>{
+                return this.boardsService.getAllBoards();
+            }
+
     //     @Get()
     //     getAllBoard():Board[]{
     //     return this.boardsService.getAllBoards();
